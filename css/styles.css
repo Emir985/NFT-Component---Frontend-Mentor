@@ -1,0 +1,174 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --card-bg:#15263F;
+    --main-bg:#0D192C;
+    --line:#2E405A;
+    --cyan:#00FFF8;
+    --white:#FFFFFF;
+    --soft:#8BACD9;
+}
+
+body{
+    font-family: "Outfit", sans-serif;
+    background-color: var(--main-bg);
+    
+}
+
+/* Card styling */
+
+#card{
+    background-color: var(--card-bg);
+    width: 350px;
+    height: 596px;
+    padding: 1.3rem;
+    border-radius: 1rem;
+    margin: 0 auto;
+    margin-top: 9rem;
+}
+
+figure,
+.ethereum-image{
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    
+    border-radius: 0.5rem;
+    position: relative;
+}
+.ethereum-image{
+    object-fit: cover;
+    z-index: 1;
+}
+.view,
+.blue-background{
+    position: absolute;
+    border-radius: .5rem;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 99.5%;
+    opacity: 1;
+}
+.blue-background{
+    background-color: var(--cyan);
+    opacity: .3;
+    z-index: 1;
+}
+.view{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+    opacity: 0;
+}
+
+svg{
+    position: relative;
+    z-index: 2;
+}
+.view:hover{
+    opacity: 1;
+    transition: .3s;
+    cursor:pointer;
+}
+
+
+
+h2{
+    color: var(--white); 
+}
+
+h2:hover,
+.name:hover{
+    color: var(--cyan);
+    cursor: pointer;
+    transition: .3s;
+}
+
+p{
+    color:var(--soft);
+    font-size: 1.2rem;
+}
+
+
+/* Middle of the card */
+
+.middle,
+.bottom,
+.ether,
+.clock{
+    display: flex;
+    align-items: center;
+}
+
+ figure,
+ h2,
+.middle,
+.description{
+    justify-content: space-between;
+    margin-bottom: 1.4rem;
+}
+
+.ether p{
+    color: var(--cyan);
+}
+
+.ether p,
+.clock p{
+    margin-left:.3rem;
+}
+
+hr{
+    border: .1rem solid var(--line);
+}
+/* Bottom of the card */
+.bottom{
+    align-items: center;
+    padding: 1rem 0;
+}
+
+.bottom img{
+    width: 2rem;
+}
+
+.bottom p{
+    margin-left: 1rem;
+    font-size: 1rem;
+}
+
+.avatar{
+    border: 1px solid var(--white) ;
+    border-radius: 1rem;
+}
+.name{
+    color: var(--white);
+}
+/* Footer  */
+
+footer{
+    clear: both;
+    position: fixed;
+    width: 100vw;
+    bottom: 0;
+    margin: 0 auto;
+    color: var(--white);
+}
+.attribution {
+    font-size: 11px;
+    text-align: center;
+  }
+  .attribution a {
+    color: hsl(228, 45%, 44%);
+  }
+
+  @media  screen and (max-width: 375px){
+    #card{
+        padding: 1.5rem;
+    }
+  }
